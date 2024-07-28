@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--生命周期-->
+    <bean class="com.minesaber.Student" init-method="init">
+        <property name="detail" ref="detail"/>
+    </bean>
+    <bean id="detail" class="com.minesaber.Detail"/>
+    <bean class="com.minesaber.MyBeanDefinitionRegistryPostProcessor"/>
+    <bean class="com.minesaber.MyBeanFactoryPostProcessor"/>
+    <bean class="com.minesaber.MyBeanPostProcessor"/>
+</beans>
